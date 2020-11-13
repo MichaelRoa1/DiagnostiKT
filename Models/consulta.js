@@ -1,8 +1,8 @@
-/*const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
-const p = path.join(path.dirname(process.mainModule.filename), 'Data', 'usuario.json');
+const p = path.join(path.dirname(process.mainModule.filename), 'Data', 'consulta.json');
 
-const getusuarioStorage = cb => {
+/*const getusuarioStorage = cb => {
     conexion.query('SELECT * FROM caratula', function(err,rows, fields){
         if (err) throw err;
 
@@ -10,7 +10,7 @@ const getusuarioStorage = cb => {
     });
 }*/
 
-module.exports = class usuario{
+module.exports = class consulta{
 constructor (nombre, edad, sintomas, alergias){
    
     this.nombre = nombre;
@@ -21,10 +21,10 @@ constructor (nombre, edad, sintomas, alergias){
 
 }
 
-    static getAll (cb){
+static getAll (cb){
         
-        getusuarioStorage(cb);
-    }
-   
+    getconsultaStorage(cb);
+}
+
 
 };
